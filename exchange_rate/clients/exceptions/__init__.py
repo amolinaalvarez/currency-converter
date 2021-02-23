@@ -1,0 +1,2 @@
+class FixerException(BaseException):
+    pass
