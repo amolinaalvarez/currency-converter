@@ -67,13 +67,13 @@ python manage.py runserver
 
 ## Running the tests
 
-Django comes with a test suite of its own, in the tests directory of the code base. It’s our policy to make sure all tests pass at all times. We appreciate any and all contributions! [DOC](https://docs.djangoproject.com/en/dev/topics/testing/overview/)
+Django comes with a test suite of its own, in the tests directory of the code base.
 
 ```
 python manage.py test
 ```
 
-# Endpoints
+## Endpoints
 
 The platform exposes the following API endpoints:
 
@@ -96,5 +96,15 @@ The platform exposes the following API endpoints:
 - Calculate amount in a currency exchanged into a different currency
 
     ```
-    /api/currency-exchanges/list
+    /api/currency-exchanges/calculate
     ```
+
+    - Parameters:
+        - source_currency
+        - amount
+        - exchanged_currency
+
+    - Example:
+        ```
+        /api/currency-exchanges/calculate?source_currency=EUR&amount=200&exchanged_currency=USD
+        ```
